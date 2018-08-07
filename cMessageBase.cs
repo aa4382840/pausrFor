@@ -3,7 +3,7 @@ namespace nMessage {
 		public cMessageBase() {
 			System.Console.Title = Title;
 
-			System.Console.ConsoleColor = System.ConsoleColor.Green;
+			System.Console.ForegroundColor = System.ConsoleColor.Green;
 
 			System.Console.Clear();
 		}
@@ -20,7 +20,7 @@ namespace nMessage {
 			get {
 				return
 					System.IO.Path.GetFileNameWithoutExtension(
-						System.Environment.GetComandLineArgs()[0]
+						System.Environment.GetCommandLineArgs()[0]
 					)
 				;
 			}
