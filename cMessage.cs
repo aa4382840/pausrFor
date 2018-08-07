@@ -1,9 +1,9 @@
 namespace nMessage {
-	public class cMessage : object {
+	public class cMessage : nMessage.cMessageBase {
 		public cMessage(object message) {
 			System.Console.Write(message);
 
-			System.Console.WriteLine(@" ...");
+			System.Console.WriteLine(Suffix);
 		}
 	}
 }
