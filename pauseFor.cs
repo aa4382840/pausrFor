@@ -1,9 +1,15 @@
 namespace Main {
-	public class pauseFor : object {
+	public class PauseFor : object {
 		public static void Main() {
-			System.Threading.Thread.Sleep(
-				System.Convert.ToInt32(System.Environment.GetCommandLineArgs()[1]) * 1000
-			);
+			try {
+				new nMessage.cMessage(@"Starting ...");
+
+				new nPause.cPause();
+			} catch(System.Exception e) {
+				new nMessage.cMessage(e);
+			} finally {
+				new nMessage.cMessage(@"Exiting ...");
+			}
 		}
 	}
 }
