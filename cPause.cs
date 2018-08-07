@@ -1,19 +1,13 @@
 namespace nPause {
-	public class cPause : object {
+	public class cPause : nPause.cPauseBase {
 		public cPause() {
-			new nMessage.cMessage(@"Pausing for " + System.Environment.GetCommandLineArgs()[1] + @" Seconds ...");
+			new nMessage.cMessage(
+				@"Pausing for " + Seconds + @" Seconds"
+			);
 
 			System.Threading.Thread.Sleep(
 				MilliSeconds
 			);
-		}
-
-		private int MilliSeconds {
-			get {
-				return
-					System.Convert.ToInt32(System.Environment.GetCommandLineArgs()[1]) * 1000
-				;
-			}
 		}
 	}
 }
